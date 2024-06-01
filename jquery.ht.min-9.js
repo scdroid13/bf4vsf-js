@@ -113,7 +113,7 @@ function fetchLinksLocal() {
 
 // Script 1
 
-var adSlot_0 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_0'></div></center></div>";
+
 var adSlot_0_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'>Advertisement<\/div><\/div>";
 
 var adSlot_1 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_1'></div></center></div>";
@@ -272,11 +272,11 @@ function executeAds() {
 
     var adNumber = 0;
     function runRegularAdSetupDirect_Spacial(isDesktop) {
-        adIntervalPx = 300;
-        maxAds = 6;
+        adIntervalPx = 400;
+        maxAds = 5;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
 
-        var adSlots = [adSlot_0, adSlot_1, adSlot_2, adSlot_3, adSlot_4, adSlot_5, adSlot_6];
+        var adSlots = [adSlot_1, adSlot_2, adSlot_3, adSlot_4, adSlot_5, adSlot_6];
         var adPositions = []; // Array to store positions of inserted ad slots
         var adIndex = 0;
         var adsInserted = 0;
@@ -347,13 +347,17 @@ function executeAds() {
                 return;
             }
 
-            // Insert the first ad slot at the top of the target
-            var firstAdSlot = getNextAdSlot();
-            adNumber++;
-            insertAdAtTop(target, firstAdSlot);
-            adPositions.push(0); // First ad is at the top
-            adsInserted++;
-            //console.log("Inserted first ad " + firstAdSlot + " at the top of target");
+
+			//skipping this as using the_ad_in_zero as first ad on top
+			/*
+              // Insert the first ad slot at the top of the target
+              var firstAdSlot = getNextAdSlot();
+              adNumber++;
+              insertAdAtTop(target, firstAdSlot);
+              adPositions.push(0); // First ad is at the top
+              adsInserted++;
+              //console.log("Inserted first ad " + firstAdSlot + " at the top of target");
+			*/
 
             var targetHeight = target.offsetHeight;
             //console.log("targetHeight: " + targetHeight);
@@ -367,18 +371,40 @@ function executeAds() {
 
         if (isDesktop) {
             // Insert ads in desktop-specific slots
-            $("#side-bar-unit-left").html(slotFL);
-            $("#side-bar-unit-right").html(slotFR);
+			setTimeout(() => {
+			  $("#side-bar-unit-left").html(slotFL);
+			}, 500);
+
+			setTimeout(() => {
+			  $("#side-bar-unit-right").html(slotFR);
+			}, 1500);
         }
 
-		$("#adSlot_0").html(adSlot_0_Code);
-		$("#adSlot_1").html(adSlot_1_Code);
-		$("#adSlot_2").html(adSlot_2_Code);
-		$("#adSlot_3").html(adSlot_3_Code);
-		$("#adSlot_4").html(adSlot_4_Code);
-		$("#adSlot_5").html(adSlot_5_Code);
-		$("#adSlot_6").html(adSlot_6_Code);
+        const adCodes = [
+          { id: "#the_ad_in_zero", code: adSlot_0_Code },
+          { id: "#adSlot_1", code: adSlot_1_Code },
+          { id: "#adSlot_2", code: adSlot_2_Code },
+          { id: "#adSlot_3", code: adSlot_3_Code },
+          { id: "#adSlot_4", code: adSlot_4_Code },
+          { id: "#adSlot_5", code: adSlot_5_Code },
+          { id: "#adSlot_6", code: adSlot_6_Code }
+        ];
 
+        adCodes.forEach((ad, index) => {
+          setTimeout(() => {
+            $(ad.id).html(ad.code);
+          }, 1000 * index);
+		});
+
+		/*
+          $("#the_ad_in_zero").html(adSlot_0_Code);
+          $("#adSlot_1").html(adSlot_1_Code);
+          $("#adSlot_2").html(adSlot_2_Code);
+          $("#adSlot_3").html(adSlot_3_Code);
+          $("#adSlot_4").html(adSlot_4_Code);
+          $("#adSlot_5").html(adSlot_5_Code);
+          $("#adSlot_6").html(adSlot_6_Code);
+		*/
     }
 
 
@@ -528,7 +554,7 @@ function executeAds() {
 
 
 
-    var full_ad_mobile = true;
+    var full_ad_mobile = false;
     var full_ad_desktop = false;
     loadAdSetup(full_ad_mobile, full_ad_desktop);
 
