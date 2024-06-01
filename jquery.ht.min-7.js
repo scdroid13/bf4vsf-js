@@ -112,19 +112,27 @@ function fetchLinksLocal() {
 
 
 // Script 1
-var adSlot_0 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><div style='text-align: center;  font-size: 80%;'>Advertisement<\/div><\/div>";
 
-var adSlot_1 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6640827757' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+var adSlot_0 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_0'></div></center></div>";
+var adSlot_0_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'>Advertisement<\/div><\/div>";
 
-var adSlot_2 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7048814373' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+var adSlot_1 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_1'></div></center></div>";
+var adSlot_1_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6640827757' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_3 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2741903703' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+var adSlot_2 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_2'></div></center></div>";
+var adSlot_2_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7048814373' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_4 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8691576212' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+var adSlot_3 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_3'></div></center></div>";
+var adSlot_3_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2741903703' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_5 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7378494547' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+var adSlot_4 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_4'></div></center></div>";
+var adSlot_4_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8691576212' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_6 = "<div style='max-height:300px;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6065412879' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+var adSlot_5 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_5'></div></center></div>";
+var adSlot_5_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7378494547' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_6 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_6'></div></center></div>";
+var adSlot_6_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6065412879' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
 var adSlot_end = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='4263649187' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
 
@@ -264,7 +272,7 @@ function executeAds() {
 
     var adNumber = 0;
     function runRegularAdSetupDirect_Spacial(isDesktop) {
-        adIntervalPx = 500;
+        adIntervalPx = 300;
         maxAds = 6;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
 
@@ -362,6 +370,15 @@ function executeAds() {
             $("#side-bar-unit-left").html(slotFL);
             $("#side-bar-unit-right").html(slotFR);
         }
+
+		$("#adSlot_0").html(adSlot_0_Code);
+		$("#adSlot_1").html(adSlot_1_Code);
+		$("#adSlot_2").html(adSlot_2_Code);
+		$("#adSlot_3").html(adSlot_3_Code);
+		$("#adSlot_4").html(adSlot_4_Code);
+		$("#adSlot_5").html(adSlot_5_Code);
+		$("#adSlot_6").html(adSlot_6_Code);
+
     }
 
 
@@ -511,7 +528,7 @@ function executeAds() {
 
 
 
-    var full_ad_mobile = true;
+    var full_ad_mobile = false;
     var full_ad_desktop = false;
     loadAdSetup(full_ad_mobile, full_ad_desktop);
 
