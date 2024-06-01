@@ -120,6 +120,12 @@ var adSlot_2 = "<br\/><script async='async' src='//pagead2.googlesyndication.com
 
 var adSlot_3 = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2741903703' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
 
+var adSlot_4 = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8691576212' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
+
+var adSlot_5 = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7378494547' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
+
+var adSlot_6 = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6065412879' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
+
 var adSlot_end = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='4263649187' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
 
 var slotFL = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8080808375'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 50%;'>Advertisement<\/div>";
@@ -257,13 +263,12 @@ function executeAds() {
 
 
     var adNumber = 0;
-
     function runRegularAdSetupDirect_Spacial(isDesktop) {
         adIntervalPx = 500;
-        maxAds = 5;
+        maxAds = 6;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
 
-        var adSlots = ["adSlot", "adSlot", "adSlot"];
+        var adSlots = [adSlot_0, adSlot_1, adSlot_2, adSlot_3, adSlot_4, adSlot_5, adSlot_6];
         var adPositions = []; // Array to store positions of inserted ad slots
         var adIndex = 0;
         var adsInserted = 0;
