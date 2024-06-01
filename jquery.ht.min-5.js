@@ -312,7 +312,7 @@ function executeAds() {
                 if (accumulatedHeight >= adIntervalPx && adsInserted < maxAds) {
                     var position = accumulatedHeight;
                     if (isSpaceAvailable(position)) {
-                        var adSlot = getNextAdSlot() + "__" + adNumber;
+                        var adSlot = getNextAdSlot();
                         adNumber++;
                         insertAdAfter(child, adSlot);
                         adPositions.push(position);
