@@ -280,6 +280,19 @@ function executeAds() {
 
 	var adNumber = 0;
     function runRegularAdSetupDirect_3_Mix_Posi_Space(isDesktop) {
+		
+		if (isDesktop) {
+            // Insert ads in desktop-specific slots
+			setTimeout(() => {
+			  $("#side-bar-unit-left").html(slotFL);
+			}, 500);
+
+			setTimeout(() => {
+			  $("#side-bar-unit-right").html(slotFR);
+			}, 1500);
+        }
+		
+		
         adIntervalPx = 500;
         maxAds = 4;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
@@ -377,33 +390,11 @@ function executeAds() {
             //console.error("Error in ad insertion: ", err);
         }
 
-        if (isDesktop) {
-            // Insert ads in desktop-specific slots
-			setTimeout(() => {
-			  $("#side-bar-unit-left").html(slotFL);
-			}, 500);
-
-			setTimeout(() => {
-			  $("#side-bar-unit-right").html(slotFR);
-			}, 1500);
-        }
-
 		if (isDesktop) {
 			$("#the_ad_in_zero").html(adSlot_0_300px_Code);
 		} else {
 			$("#the_ad_in_zero").html(adSlot_0_600px_Code);
 		}
-
-        if (isDesktop) {
-            // Insert ads in desktop-specific slots
-			setTimeout(() => {
-			  $("#side-bar-unit-left").html(slotFL);
-			}, 500);
-
-			setTimeout(() => {
-			  $("#side-bar-unit-right").html(slotFR);
-			}, 1500);
-        }
 		
         const adCodes = [
           { id: "#adSlot_1", code: adSlot_1_Code },
