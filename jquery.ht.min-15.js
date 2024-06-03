@@ -394,6 +394,17 @@ function executeAds() {
 			$("#the_ad_in_zero").html(adSlot_0_600px_Code);
 		}
 
+        if (isDesktop) {
+            // Insert ads in desktop-specific slots
+			setTimeout(() => {
+			  $("#side-bar-unit-left").html(slotFL);
+			}, 500);
+
+			setTimeout(() => {
+			  $("#side-bar-unit-right").html(slotFR);
+			}, 1500);
+        }
+		
         const adCodes = [
           { id: "#adSlot_1", code: adSlot_1_Code },
           { id: "#adSlot_2", code: adSlot_2_Code },
