@@ -278,7 +278,7 @@ function executeAds() {
 
 	var adNumber = 0;
     function runRegularAdSetupDirect_3_Mix_Posi_Space(isDesktop) {
-        adIntervalPx = 400;
+        adIntervalPx = 500;
         maxAds = 4;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
 
@@ -421,10 +421,10 @@ function executeAds() {
             if (messageContent.length > 0) {
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
-                if (h3Tags.length > 0) {
-                    insertAfter(adscont, h3Tags[0]); // Insert before the 2nd h3 tag
-                } else if (pTags.length > 2) {
-                    insertAfter(adscont, pTags[2]); // Insert before the 4th p tag
+                if (h3Tags.length > 1) {
+                    insertAfter(adscont, h3Tags[1]); // Insert before the 2nd h3 tag
+                } else if (pTags.length > 3) {
+                    insertAfter(adscont, pTags[3]); // Insert before the 4th p tag
                 }
                 $("#the_ad_in_one").html(adSlot_Feed_1_Code);
             } else {
@@ -446,10 +446,10 @@ function executeAds() {
             if (messageContent.length > 0) {
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
-                if (h3Tags.length > 1) {
-                    insertAfter(adscont, h3Tags[1]); // Insert before the 2nd h3 tag
-                } else if (pTags.length > 3) {
-                    insertAfter(adscont, pTags[3]); // Insert before the 4th p tag
+                if (h3Tags.length > 2) {
+                    insertAfter(adscont, h3Tags[2]); // Insert before the 2nd h3 tag
+                } else if (pTags.length > 7) {
+                    insertAfter(adscont, pTags[7]); // Insert before the 4th p tag
                 }
                 window.setTimeout(function() {
                     $("#the_ad_in_two").html(adSlot_Article_1_Code);
@@ -474,10 +474,10 @@ function executeAds() {
             if (messageContent.length > 0) {
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
-                if (h3Tags.length > 2) {
-                    insertAfter(adscont, h3Tags[2]); // Insert before the 2nd h3 tag
-                } else if (pTags.length > 5) {
-                    insertAfter(adscont, pTags[5]); // Insert before the 4th p tag
+                if (h3Tags.length > 3) {
+                    insertAfter(adscont, h3Tags[3]); // Insert before the 2nd h3 tag
+                } else if (pTags.length > 11) {
+                    insertAfter(adscont, pTags[11]); // Insert before the 4th p tag
                 }
                 window.setTimeout(function() {
                     $("#the_ad_in_three").html(adSlot_Mutli_Code);
