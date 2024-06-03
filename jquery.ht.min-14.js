@@ -419,11 +419,12 @@ function executeAds() {
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 1) {
-                    insertAfter(adscont, h3Tags[1]); // Insert before the 2nd h3 tag
+                    insertAfter(adscont, h3Tags[1]);
+					$("#the_ad_in_one").html(adSlot_Feed_1_Code);
                 } else if (pTags.length > 3) {
-                    insertAfter(adscont, pTags[3]); // Insert before the 4th p tag
+                    insertAfter(adscont, pTags[3]);
+					$("#the_ad_in_one").html(adSlot_Feed_1_Code);
                 }
-                $("#the_ad_in_one").html(adSlot_Feed_1_Code);
             } else {
                 var linebreak = target.getElementsByTagName("h2");
                 if (linebreak.length > 0) {
@@ -444,13 +445,16 @@ function executeAds() {
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 2) {
-                    insertAfter(adscont, h3Tags[2]); // Insert before the 2nd h3 tag
-                } else if (pTags.length > 7) {
-                    insertAfter(adscont, pTags[7]); // Insert before the 4th p tag
-                }
-                window.setTimeout(function() {
+                    insertAfter(adscont, h3Tags[2]);
+					window.setTimeout(function() {
                     $("#the_ad_in_two").html(adSlot_Article_1_Code);
                 }, 2000);
+                } else if (pTags.length > 7) {
+                    insertAfter(adscont, pTags[7]);
+					window.setTimeout(function() {
+                    $("#the_ad_in_two").html(adSlot_Article_1_Code);
+                }, 2000);
+                }
             } else {
                 var linebreak = target.getElementsByTagName("span");
                 if (linebreak.length > 4) {
@@ -472,20 +476,15 @@ function executeAds() {
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 3) {
-                    insertAfter(adscont, h3Tags[3]); // Insert before the 2nd h3 tag
-                } else if (pTags.length > 11) {
-                    insertAfter(adscont, pTags[11]); // Insert before the 4th p tag
-                }
-                window.setTimeout(function() {
+                    insertAfter(adscont, h3Tags[3]);
+					window.setTimeout(function() {
                     $("#the_ad_in_three").html(adSlot_Mutli_Code);
                 }, 3000);
-            } else {
-                var linebreak = target.getElementsByTagName("h2");
-                if (linebreak.length > 2) {
-                    insertAfter(adscont, linebreak[2]);
-                    window.setTimeout(function() {
-                        $("#the_ad_in_three").html(adSlot_Mutli_Code);
-                    }, 3000);
+                } else if (pTags.length > 11) {
+                    insertAfter(adscont, pTags[11]);
+					window.setTimeout(function() {
+                    $("#the_ad_in_three").html(adSlot_Mutli_Code);
+                }, 3000);
                 }
             }
         } catch (err) {}
