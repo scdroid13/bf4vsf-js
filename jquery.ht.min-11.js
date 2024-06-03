@@ -114,6 +114,13 @@ function fetchLinksLocal() {
 // Script 1
 
 
+var adSlot_Mutli_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:300px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='1714571493' ></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+
+var adSlot_Feed_1_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-format='fluid' data-ad-layout-key='-6t+ed+2i-1n-4w' data-ad-client='ca-pub-7470371338229516' data-ad-slot='5955556068' ></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+
+var adSlot_Article_1_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block; text-align:center;' data-ad-layout='in-article' data-ad-format='fluid' data-ad-client='ca-pub-7470371338229516' data-ad-slot='5955556068' ></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
+
+
 var adSlot_0_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'>Advertisement<\/div><\/div>";
 
 var adSlot_1 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_1'></div></center></div>";
@@ -195,13 +202,13 @@ function executeAds() {
                 if (adjustedHeight > 450) adjustedHeight = 450;
                 runFullAdSetupFirst(adjustedWidth, adjustedHeight, isDesktop);
             } else {
-                runRegularAdSetupDirect_Spacial(isDesktop);
+                runRegularAdSetupDirect_3_Mix_Posi_Space(isDesktop);
             }
         } else {
             if (full_ad_mobile) {
                 runFullAdSetupFirst(adjustedWidth, adjustedHeight, isDesktop);
             } else {
-                runRegularAdSetupDirect_Spacial(isDesktop);
+                runRegularAdSetupDirect_3_Mix_Posi_Space(isDesktop);
             }
         }
     }
@@ -254,7 +261,7 @@ function executeAds() {
                         clearInterval(timer);
                         adContainer.style.display = 'none';
                         document.body.style.filter = 'none';
-                        runRegularAdSetupDirect_Spacial(isDesktop);
+                        runRegularAdSetupDirect_3_Mix_Posi_Space(isDesktop);
                     }
                 }, 1500);
             }, 0);
@@ -269,9 +276,229 @@ function executeAds() {
 
 
 
+	var adNumber = 0;
+    function runRegularAdSetupDirect_3_Mix_Posi_Space(isDesktop) {
+        adIntervalPx = 400;
+        maxAds = 4;
+        //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
+
+        var adSlots = [adSlot_1, adSlot_2, adSlot_3, adSlot_4, adSlot_5, adSlot_6];
+        var adPositions = []; // Array to store positions of inserted ad slots
+        var adIndex = 0;
+        var adsInserted = 0;
+
+        function getNextAdSlot() {
+            var adSlot = adSlots[adIndex];
+            adIndex = (adIndex + 1) % adSlots.length;
+            return adSlot;
+        }
+
+        function insertAdAfter(element, adContent) {
+            var adDiv = document.createElement('div');
+            adDiv.innerHTML = adContent;
+            element.parentNode.insertBefore(adDiv, element.nextSibling);
+        }
+
+        function insertAdAtTop(target, adContent) {
+            var adDiv = document.createElement('div');
+            adDiv.innerHTML = adContent;
+            target.insertBefore(adDiv, target.firstChild);
+        }
+
+        function isSpaceAvailable(position) {
+            for (var i = 0; i < adPositions.length; i++) {
+                if (Math.abs(adPositions[i] - position) < adIntervalPx) {
+                    return false; // Space is not available
+                }
+            }
+            return true; // Space is available
+        }
+
+        function traverseAndInsertAds(element, accumulatedHeight) {
+            if (adsInserted >= maxAds) return accumulatedHeight;
+
+            var children = Array.from(element.children);
+            children.forEach((child) => {
+                var elementHeight = child.offsetHeight;
+                accumulatedHeight += elementHeight;
+                //console.log("Traversing element, accumulatedHeight: " + accumulatedHeight + ", child.offsetHeight: " + elementHeight);
+
+                if (accumulatedHeight >= adIntervalPx && adsInserted < maxAds) {
+                    var position = accumulatedHeight;
+                    if (isSpaceAvailable(position)) {
+                        var adSlot = getNextAdSlot();
+                        adNumber++;
+                        insertAdAfter(child, adSlot);
+                        adPositions.push(position);
+                        adsInserted++;
+                        //console.log("Inserted ad " + adSlot + " after element");
+                        accumulatedHeight = 0; // Reset height counter after inserting an ad
+                    }
+                }
+
+                accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight); // Recursively traverse child nodes
+            });
+
+            return accumulatedHeight;
+        }
+
+        try {
+            var target = document.getElementsByTagName("message-content")[0];
+            if (!target) {
+                target = document.getElementById("fetch-post-body");
+            }
+
+            if (!target) {
+                //console.error("Element #adsense-target not found.");
+                return;
+            }
+
+
+			//skipping this as using the_ad_in_zero as first ad on top
+			/*
+              // Insert the first ad slot at the top of the target
+              var firstAdSlot = getNextAdSlot();
+              adNumber++;
+              insertAdAtTop(target, firstAdSlot);
+              adPositions.push(0); // First ad is at the top
+              adsInserted++;
+              //console.log("Inserted first ad " + firstAdSlot + " at the top of target");
+			*/
+
+            var targetHeight = target.offsetHeight;
+            //console.log("targetHeight: " + targetHeight);
+
+            // Start recursive traversal from target element, starting height from 0
+            traverseAndInsertAds(target, 0);
+
+        } catch (err) {
+            //console.error("Error in ad insertion: ", err);
+        }
+
+        if (isDesktop) {
+            // Insert ads in desktop-specific slots
+			setTimeout(() => {
+			  $("#side-bar-unit-left").html(slotFL);
+			}, 500);
+
+			setTimeout(() => {
+			  $("#side-bar-unit-right").html(slotFR);
+			}, 1500);
+        }
+
+        const adCodes = [
+          { id: "#the_ad_in_zero", code: adSlot_0_Code },
+          { id: "#adSlot_1", code: adSlot_1_Code },
+          { id: "#adSlot_2", code: adSlot_2_Code },
+          { id: "#adSlot_3", code: adSlot_3_Code },
+          { id: "#adSlot_4", code: adSlot_4_Code },
+          { id: "#adSlot_5", code: adSlot_5_Code },
+          { id: "#adSlot_6", code: adSlot_6_Code },
+		  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
+        ];
+
+        adCodes.forEach((ad, index) => {
+          setTimeout(() => {
+            $(ad.id).html(ad.code);
+          }, 1000 * index);
+		});
+
+		/*
+          $("#the_ad_in_zero").html(adSlot_0_Code);
+          $("#adSlot_1").html(adSlot_1_Code);
+          $("#adSlot_2").html(adSlot_2_Code);
+          $("#adSlot_3").html(adSlot_3_Code);
+          $("#adSlot_4").html(adSlot_4_Code);
+          $("#adSlot_5").html(adSlot_5_Code);
+          $("#adSlot_6").html(adSlot_6_Code);
+		*/
+		
+		
+		try {
+            adscont = document.getElementById("adsense-content-one");
+            target = document.getElementById("adsense-target");
+            var messageContent = target.getElementsByTagName("message-content");
+            if (messageContent.length > 0) {
+                var h3Tags = target.getElementsByTagName("h3");
+                var pTags = target.getElementsByTagName("p");
+                if (h3Tags.length > 0) {
+                    insertAfter(adscont, h3Tags[0]); // Insert before the 2nd h3 tag
+                } else if (pTags.length > 2) {
+                    insertAfter(adscont, pTags[2]); // Insert before the 4th p tag
+                }
+                $("#the_ad_in_one").html(adSlot_Feed_1_Code);
+            } else {
+                var linebreak = target.getElementsByTagName("h2");
+                if (linebreak.length > 0) {
+                    insertAfter(adscont, linebreak[0]);
+                    $("#the_ad_in_one").html(adSlot_Feed_1_Code);
+                }
+            }
+        } catch (err) {}
+
+
+
+
+        try {
+            adscont = document.getElementById("adsense-content-two");
+            target = document.getElementById("adsense-target");
+            var messageContent = target.getElementsByTagName("message-content");
+            if (messageContent.length > 0) {
+                var h3Tags = target.getElementsByTagName("h3");
+                var pTags = target.getElementsByTagName("p");
+                if (h3Tags.length > 1) {
+                    insertAfter(adscont, h3Tags[1]); // Insert before the 2nd h3 tag
+                } else if (pTags.length > 3) {
+                    insertAfter(adscont, pTags[3]); // Insert before the 4th p tag
+                }
+                window.setTimeout(function() {
+                    $("#the_ad_in_two").html(adSlot_Article_1_Code);
+                }, 2000);
+            } else {
+                var linebreak = target.getElementsByTagName("span");
+                if (linebreak.length > 4) {
+                    insertAfter(adscont, linebreak[4]);
+                    window.setTimeout(function() {
+                        $("#the_ad_in_two").html(adSlot_Article_1_Code);
+                    }, 2000);
+                }
+            }
+        } catch (err) {}
+
+
+
+        try {
+            adscont = document.getElementById("adsense-content-three");
+            target = document.getElementById("adsense-target");
+            var messageContent = target.getElementsByTagName("message-content");
+            if (messageContent.length > 0) {
+                var h3Tags = target.getElementsByTagName("h3");
+                var pTags = target.getElementsByTagName("p");
+                if (h3Tags.length > 2) {
+                    insertAfter(adscont, h3Tags[2]); // Insert before the 2nd h3 tag
+                } else if (pTags.length > 5) {
+                    insertAfter(adscont, pTags[5]); // Insert before the 4th p tag
+                }
+                window.setTimeout(function() {
+                    $("#the_ad_in_three").html(adSlot_Mutli_Code);
+                }, 3000);
+            } else {
+                var linebreak = target.getElementsByTagName("h2");
+                if (linebreak.length > 2) {
+                    insertAfter(adscont, linebreak[2]);
+                    window.setTimeout(function() {
+                        $("#the_ad_in_three").html(adSlot_Mutli_Code);
+                    }, 3000);
+                }
+            }
+        } catch (err) {}
+		
+		
+    }
+
 
     var adNumber = 0;
-    function runRegularAdSetupDirect_Spacial(isDesktop) {
+    function runRegularAdSetupDirect_2_Spacial(isDesktop) {
         adIntervalPx = 400;
         maxAds = 5;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
@@ -387,7 +614,8 @@ function executeAds() {
           { id: "#adSlot_3", code: adSlot_3_Code },
           { id: "#adSlot_4", code: adSlot_4_Code },
           { id: "#adSlot_5", code: adSlot_5_Code },
-          { id: "#adSlot_6", code: adSlot_6_Code }
+          { id: "#adSlot_6", code: adSlot_6_Code },
+		  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
         ];
 
         adCodes.forEach((ad, index) => {
@@ -418,7 +646,7 @@ function executeAds() {
 
 
         try {
-            $("#the_ad_in_zero").html(adSlot_0);
+            $("#the_ad_in_zero").html(adSlot_0_Code);
         } catch (err) {}
 
 
@@ -426,24 +654,20 @@ function executeAds() {
             adscont = document.getElementById("adsense-content-one");
             target = document.getElementById("adsense-target");
             var messageContent = target.getElementsByTagName("message-content");
-            console.log("NEW messageContent : " + messageContent.length)
             if (messageContent.length > 0) {
-                console.log("NEW messageContent.length : " + messageContent.length)
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 0) {
-                    console.log("NEW h3Tags.length : " + h3Tags.length)
                     insertAfter(adscont, h3Tags[0]); // Insert before the 2nd h3 tag
                 } else if (pTags.length > 2) {
-                    console.log("NEW pTags.length : " + pTags.length)
                     insertAfter(adscont, pTags[2]); // Insert before the 4th p tag
                 }
-                $("#the_ad_in_one").html(adSlot_1);
+                $("#the_ad_in_one").html(adSlot_1_Code);
             } else {
                 var linebreak = target.getElementsByTagName("h2");
                 if (linebreak.length > 0) {
                     insertAfter(adscont, linebreak[0]);
-                    $("#the_ad_in_one").html(adSlot_1);
+                    $("#the_ad_in_one").html(adSlot_1_Code);
                 }
             }
         } catch (err) {}
@@ -455,27 +679,23 @@ function executeAds() {
             adscont = document.getElementById("adsense-content-two");
             target = document.getElementById("adsense-target");
             var messageContent = target.getElementsByTagName("message-content");
-            console.log("NEW messageContent : " + messageContent.length)
             if (messageContent.length > 0) {
-                console.log("NEW messageContent.length : " + messageContent.length)
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 1) {
-                    console.log("NEW h3Tags.length : " + h3Tags.length)
                     insertAfter(adscont, h3Tags[1]); // Insert before the 2nd h3 tag
                 } else if (pTags.length > 3) {
-                    console.log("NEW pTags.length : " + pTags.length)
                     insertAfter(adscont, pTags[3]); // Insert before the 4th p tag
                 }
                 window.setTimeout(function() {
-                    $("#the_ad_in_two").html(adSlot_2);
+                    $("#the_ad_in_two").html(adSlot_2_Code);
                 }, 2000);
             } else {
                 var linebreak = target.getElementsByTagName("span");
                 if (linebreak.length > 4) {
                     insertAfter(adscont, linebreak[4]);
                     window.setTimeout(function() {
-                        $("#the_ad_in_two").html(adSlot_2);
+                        $("#the_ad_in_two").html(adSlot_2_Code);
                     }, 2000);
                 }
             }
@@ -487,27 +707,23 @@ function executeAds() {
             adscont = document.getElementById("adsense-content-three");
             target = document.getElementById("adsense-target");
             var messageContent = target.getElementsByTagName("message-content");
-            console.log("NEW messageContent : " + messageContent.length)
             if (messageContent.length > 0) {
-                console.log("NEW messageContent.length : " + messageContent.length)
                 var h3Tags = target.getElementsByTagName("h3");
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 2) {
-                    console.log("NEW h3Tags.length : " + h3Tags.length)
                     insertAfter(adscont, h3Tags[2]); // Insert before the 2nd h3 tag
                 } else if (pTags.length > 5) {
-                    console.log("NEW pTags.length : " + pTags.length)
                     insertAfter(adscont, pTags[5]); // Insert before the 4th p tag
                 }
                 window.setTimeout(function() {
-                    $("#the_ad_in_three").html(adSlot_3);
+                    $("#the_ad_in_three").html(adSlot_3_Code);
                 }, 3000);
             } else {
                 var linebreak = target.getElementsByTagName("h2");
                 if (linebreak.length > 2) {
                     insertAfter(adscont, linebreak[2]);
                     window.setTimeout(function() {
-                        $("#the_ad_in_three").html(adSlot_3);
+                        $("#the_ad_in_three").html(adSlot_3_Code);
                     }, 3000);
                 }
             }
