@@ -121,27 +121,53 @@ var adSlot_Feed_1_Code = "<div style='width: 100vw; max-width:720px !important; 
 var adSlot_Article_1_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block; text-align:center;' data-ad-layout='in-article' data-ad-format='fluid' data-ad-client='ca-pub-7470371338229516' data-ad-slot='5955556068' ></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
 
 
-var adSlot_0_300px_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
 
-var adSlot_0_600px_Code = "<div style='width: 100vw; max-width:400px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
 
-var adSlot_1 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_1'></div></center></div>";
-var adSlot_1_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6640827757' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_0_300px_Code = "<div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
 
-var adSlot_2 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_2'></div></center></div>";
-var adSlot_2_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7048814373' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_0_600px_Code = "<div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><\/div>";
 
-var adSlot_3 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_3'></div></center></div>";
-var adSlot_3_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2741903703' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_4 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_4'></div></center></div>";
-var adSlot_4_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8691576212' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_5 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_5'></div></center></div>";
-var adSlot_5_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7378494547' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_1 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_1'></div></center></div>";
+var adSlot_1_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6640827757' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_1_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6640827757' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
 
-var adSlot_6 = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><center><div id='adSlot_6'></div></center></div>";
-var adSlot_6_Code = "<div style='width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6065412879' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_2 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_2'></div></center></div>";
+var adSlot_2_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7048814373' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_2_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7048814373' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_3 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_3'></div></center></div>";
+var adSlot_3_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2741903703' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_3_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2741903703' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_4 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_4'></div></center></div>";
+var adSlot_4_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8691576212' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_4_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='8691576212' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_5 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_5'></div></center></div>";
+var adSlot_5_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7378494547' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_5_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='7378494547' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_6 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_6'></div></center></div>";
+var adSlot_6_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6065412879' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_6_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6065412879' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+
+var adSlot_7 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_7'></div></center></div>";
+var adSlot_7_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6570988954' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_7_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6570988954' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_8 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_8'></div></center></div>";
+var adSlot_8_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6474887667' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_8_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='6474887667' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+var adSlot_9 = "<div style='width: 100vw; max-width:720px !important; max-height:600px !important;'><center><div id='adSlot_9'></div></center></div>";
+var adSlot_9_300px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:720px !important; max-height:450px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2073873579' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+var adSlot_9_600px_Code = "<br\/><div style='display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='2073873579' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/><div style='text-align: center;  font-size: 60%;'><\/div><\/div>";
+
+
 
 var adSlot_end = "<br\/><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='4263649187' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><br\/>";
 
@@ -392,25 +418,41 @@ function executeAds() {
 
 		if (isDesktop) {
 			$("#the_ad_in_zero").html(adSlot_0_300px_Code);
+			const adCodes = [
+			  { id: "#adSlot_1", code: adSlot_1_300px_Code },
+			  { id: "#adSlot_2", code: adSlot_2_300px_Code },
+			  { id: "#adSlot_3", code: adSlot_3_300px_Code },
+			  { id: "#adSlot_4", code: adSlot_4_300px_Code },
+			  { id: "#adSlot_5", code: adSlot_5_300px_Code },
+			  { id: "#adSlot_6", code: adSlot_6_300px_Code },
+			  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
+			];
+
+			adCodes.forEach((ad, index) => {
+			  setTimeout(() => {
+				$(ad.id).html(ad.code);
+			  }, 1000 * index);
+			});
 		} else {
 			$("#the_ad_in_zero").html(adSlot_0_600px_Code);
+			const adCodes = [
+			  { id: "#adSlot_1", code: adSlot_1_600px_Code },
+			  { id: "#adSlot_2", code: adSlot_2_600px_Code },
+			  { id: "#adSlot_3", code: adSlot_3_600px_Code },
+			  { id: "#adSlot_4", code: adSlot_4_600px_Code },
+			  { id: "#adSlot_5", code: adSlot_5_600px_Code },
+			  { id: "#adSlot_6", code: adSlot_6_600px_Code },
+			  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
+			];
+
+			adCodes.forEach((ad, index) => {
+			  setTimeout(() => {
+				$(ad.id).html(ad.code);
+			  }, 1000 * index);
+			});
 		}
 		
-        const adCodes = [
-          { id: "#adSlot_1", code: adSlot_1_Code },
-          { id: "#adSlot_2", code: adSlot_2_Code },
-          { id: "#adSlot_3", code: adSlot_3_Code },
-          { id: "#adSlot_4", code: adSlot_4_Code },
-          { id: "#adSlot_5", code: adSlot_5_Code },
-          { id: "#adSlot_6", code: adSlot_6_Code },
-		  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
-        ];
 
-        adCodes.forEach((ad, index) => {
-          setTimeout(() => {
-            $(ad.id).html(ad.code);
-          }, 1000 * index);
-		});
 
 		
 		try {
@@ -422,16 +464,28 @@ function executeAds() {
                 var pTags = target.getElementsByTagName("p");
                 if (h3Tags.length > 1) {
                     insertAfter(adscont, h3Tags[1]);
-					$("#the_ad_in_one").html(adSlot_Feed_1_Code);
+					if (isDesktop) {
+						$("#the_ad_in_one").html(adSlot_7_300px_Code);
+					} else {
+						$("#the_ad_in_one").html(adSlot_7_600px_Code);
+					}
                 } else if (pTags.length > 3) {
                     insertAfter(adscont, pTags[3]);
-					$("#the_ad_in_one").html(adSlot_Feed_1_Code);
+					if (isDesktop) {
+						$("#the_ad_in_one").html(adSlot_7_300px_Code);
+					} else {
+						$("#the_ad_in_one").html(adSlot_7_600px_Code);
+					}
                 }
             } else {
                 var linebreak = target.getElementsByTagName("h2");
                 if (linebreak.length > 0) {
                     insertAfter(adscont, linebreak[0]);
-                    $("#the_ad_in_one").html(adSlot_Feed_1_Code);
+                    if (isDesktop) {
+						$("#the_ad_in_one").html(adSlot_7_300px_Code);
+					} else {
+						$("#the_ad_in_one").html(adSlot_7_600px_Code);
+					}
                 }
             }
         } catch (err) {}
@@ -449,12 +503,20 @@ function executeAds() {
                 if (h3Tags.length > 2) {
                     insertAfter(adscont, h3Tags[2]);
 					window.setTimeout(function() {
-                    $("#the_ad_in_two").html(adSlot_Article_1_Code);
+						if (isDesktop) {
+							$("#the_ad_in_two").html(adSlot_8_300px_Code);
+						} else {
+							$("#the_ad_in_two").html(adSlot_8_600px_Code);
+						}
                 }, 2000);
                 } else if (pTags.length > 7) {
                     insertAfter(adscont, pTags[7]);
 					window.setTimeout(function() {
-                    $("#the_ad_in_two").html(adSlot_Article_1_Code);
+						if (isDesktop) {
+							$("#the_ad_in_two").html(adSlot_8_300px_Code);
+						} else {
+							$("#the_ad_in_two").html(adSlot_8_600px_Code);
+						}
                 }, 2000);
                 }
             } else {
@@ -462,7 +524,11 @@ function executeAds() {
                 if (linebreak.length > 4) {
                     insertAfter(adscont, linebreak[4]);
                     window.setTimeout(function() {
-                        $("#the_ad_in_two").html(adSlot_Article_1_Code);
+						if (isDesktop) {
+							$("#the_ad_in_two").html(adSlot_8_300px_Code);
+						} else {
+							$("#the_ad_in_two").html(adSlot_8_600px_Code);
+						}
                     }, 2000);
                 }
             }
@@ -480,13 +546,21 @@ function executeAds() {
                 if (h3Tags.length > 3) {
                     insertAfter(adscont, h3Tags[3]);
 					window.setTimeout(function() {
-                    $("#the_ad_in_three").html(adSlot_Mutli_Code);
-                }, 3000);
+						if (isDesktop) {
+							$("#the_ad_in_three").html(adSlot_9_300px_Code);
+						} else {
+							$("#the_ad_in_three").html(adSlot_9_600px_Code);
+						}
+					}, 3000);
                 } else if (pTags.length > 11) {
                     insertAfter(adscont, pTags[11]);
 					window.setTimeout(function() {
-                    $("#the_ad_in_three").html(adSlot_Mutli_Code);
-                }, 3000);
+						if (isDesktop) {
+								$("#the_ad_in_three").html(adSlot_9_300px_Code);
+							} else {
+								$("#the_ad_in_three").html(adSlot_9_600px_Code);
+						}
+					}, 3000);
                 }
             }
         } catch (err) {}
@@ -607,12 +681,12 @@ function executeAds() {
 
         const adCodes = [
           { id: "#the_ad_in_zero", code: adSlot_0_300px_Code },
-          { id: "#adSlot_1", code: adSlot_1_Code },
-          { id: "#adSlot_2", code: adSlot_2_Code },
-          { id: "#adSlot_3", code: adSlot_3_Code },
-          { id: "#adSlot_4", code: adSlot_4_Code },
-          { id: "#adSlot_5", code: adSlot_5_Code },
-          { id: "#adSlot_6", code: adSlot_6_Code },
+          { id: "#adSlot_1", code: adSlot_1_300px_Code },
+          { id: "#adSlot_2", code: adSlot_2_300px_Code },
+          { id: "#adSlot_3", code: adSlot_3_300px_Code },
+          { id: "#adSlot_4", code: adSlot_4_300px_Code },
+          { id: "#adSlot_5", code: adSlot_5_300px_Code },
+          { id: "#adSlot_6", code: adSlot_6_300px_Code },
 		  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
         ];
 
@@ -624,12 +698,12 @@ function executeAds() {
 
 		/*
           $("#the_ad_in_zero").html(adSlot_0_300px_Code);
-          $("#adSlot_1").html(adSlot_1_Code);
-          $("#adSlot_2").html(adSlot_2_Code);
-          $("#adSlot_3").html(adSlot_3_Code);
-          $("#adSlot_4").html(adSlot_4_Code);
-          $("#adSlot_5").html(adSlot_5_Code);
-          $("#adSlot_6").html(adSlot_6_Code);
+          $("#adSlot_1").html(adSlot_1_300px_Code);
+          $("#adSlot_2").html(adSlot_2_300px_Code);
+          $("#adSlot_3").html(adSlot_3_300px_Code);
+          $("#adSlot_4").html(adSlot_4_300px_Code);
+          $("#adSlot_5").html(adSlot_5_300px_Code);
+          $("#adSlot_6").html(adSlot_6_300px_Code);
 		*/
     }
 
@@ -660,12 +734,12 @@ function executeAds() {
                 } else if (pTags.length > 2) {
                     insertAfter(adscont, pTags[2]); // Insert before the 4th p tag
                 }
-                $("#the_ad_in_one").html(adSlot_1_Code);
+                $("#the_ad_in_one").html(adSlot_1_300px_Code);
             } else {
                 var linebreak = target.getElementsByTagName("h2");
                 if (linebreak.length > 0) {
                     insertAfter(adscont, linebreak[0]);
-                    $("#the_ad_in_one").html(adSlot_1_Code);
+                    $("#the_ad_in_one").html(adSlot_1_300px_Code);
                 }
             }
         } catch (err) {}
@@ -686,14 +760,14 @@ function executeAds() {
                     insertAfter(adscont, pTags[3]); // Insert before the 4th p tag
                 }
                 window.setTimeout(function() {
-                    $("#the_ad_in_two").html(adSlot_2_Code);
+                    $("#the_ad_in_two").html(adSlot_2_300px_Code);
                 }, 2000);
             } else {
                 var linebreak = target.getElementsByTagName("span");
                 if (linebreak.length > 4) {
                     insertAfter(adscont, linebreak[4]);
                     window.setTimeout(function() {
-                        $("#the_ad_in_two").html(adSlot_2_Code);
+                        $("#the_ad_in_two").html(adSlot_2_300px_Code);
                     }, 2000);
                 }
             }
@@ -714,14 +788,14 @@ function executeAds() {
                     insertAfter(adscont, pTags[5]); // Insert before the 4th p tag
                 }
                 window.setTimeout(function() {
-                    $("#the_ad_in_three").html(adSlot_3_Code);
+                    $("#the_ad_in_three").html(adSlot_3_300px_Code);
                 }, 3000);
             } else {
                 var linebreak = target.getElementsByTagName("h2");
                 if (linebreak.length > 2) {
                     insertAfter(adscont, linebreak[2]);
                     window.setTimeout(function() {
-                        $("#the_ad_in_three").html(adSlot_3_Code);
+                        $("#the_ad_in_three").html(adSlot_3_300px_Code);
                     }, 3000);
                 }
             }
