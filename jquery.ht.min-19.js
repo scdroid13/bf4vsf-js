@@ -327,8 +327,8 @@ function executeAds() {
 		
 		
 		//Stage 3 - Populate Spacial ads
-        adIntervalPx = 500;
-        maxAds = 4;
+        adIntervalPx = 300;
+        maxAds = 5;
         //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
 
         var adSlots = [adSlot_1, adSlot_2, adSlot_3, adSlot_4, adSlot_5, adSlot_6];
@@ -425,7 +425,6 @@ function executeAds() {
         }
 
 		if (isDesktop) {
-			$("#the_ad_in_zero").html(adSlot_0_300px_Code);
 			const adCodes = [
 			  { id: "#adSlot_1", code: adSlot_1_300px_Code },
 			  { id: "#adSlot_2", code: adSlot_2_300px_Code },
@@ -439,10 +438,9 @@ function executeAds() {
 			adCodes.forEach((ad, index) => {
 			  setTimeout(() => {
 				$(ad.id).html(ad.code);
-			  }, 1000 * index);
+			  }, 10 * index);
 			});
 		} else {
-			$("#the_ad_in_zero").html(adSlot_0_600px_Code);
 			const adCodes = [
 			  { id: "#adSlot_1", code: adSlot_1_600px_Code },
 			  { id: "#adSlot_2", code: adSlot_2_600px_Code },
@@ -456,122 +454,124 @@ function executeAds() {
 			adCodes.forEach((ad, index) => {
 			  setTimeout(() => {
 				$(ad.id).html(ad.code);
-			  }, 1000 * index);
+			  }, 10 * index);
 			});
 		}
 		
 		
 		
-		//Stage 4 - Populate fixed positional ads
-		try {
-            adscont = document.getElementById("adsense-content-one");
-            target = document.getElementById("adsense-target");
-            var messageContent = target.getElementsByTagName("message-content");
-            if (messageContent.length > 0) {
-                var h3Tags = target.getElementsByTagName("h3");
-                var pTags = target.getElementsByTagName("p");
-                if (h3Tags.length > 1) {
-                    insertAfter(adscont, h3Tags[1]);
-					if (isDesktop) {
-						$("#the_ad_in_one").html(adSlot_7_300px_Code);
-					} else {
-						$("#the_ad_in_one").html(adSlot_7_600px_Code);
+		//Stage 4 - Populate fixed positional ads, only on desktop
+		if ( isDesktop ) {
+			try {
+				adscont = document.getElementById("adsense-content-one");
+				target = document.getElementById("adsense-target");
+				var messageContent = target.getElementsByTagName("message-content");
+				if (messageContent.length > 0) {
+					var h3Tags = target.getElementsByTagName("h3");
+					var pTags = target.getElementsByTagName("p");
+					if (h3Tags.length > 1) {
+						insertAfter(adscont, h3Tags[1]);
+						if (isDesktop) {
+							$("#the_ad_in_one").html(adSlot_7_300px_Code);
+						} else {
+							$("#the_ad_in_one").html(adSlot_7_600px_Code);
+						}
+					} else if (pTags.length > 3) {
+						insertAfter(adscont, pTags[3]);
+						if (isDesktop) {
+							$("#the_ad_in_one").html(adSlot_7_300px_Code);
+						} else {
+							$("#the_ad_in_one").html(adSlot_7_600px_Code);
+						}
 					}
-                } else if (pTags.length > 3) {
-                    insertAfter(adscont, pTags[3]);
-					if (isDesktop) {
-						$("#the_ad_in_one").html(adSlot_7_300px_Code);
-					} else {
-						$("#the_ad_in_one").html(adSlot_7_600px_Code);
+				} else {
+					var linebreak = target.getElementsByTagName("h2");
+					if (linebreak.length > 0) {
+						insertAfter(adscont, linebreak[0]);
+						if (isDesktop) {
+							$("#the_ad_in_one").html(adSlot_7_300px_Code);
+						} else {
+							$("#the_ad_in_one").html(adSlot_7_600px_Code);
+						}
 					}
-                }
-            } else {
-                var linebreak = target.getElementsByTagName("h2");
-                if (linebreak.length > 0) {
-                    insertAfter(adscont, linebreak[0]);
-                    if (isDesktop) {
-						$("#the_ad_in_one").html(adSlot_7_300px_Code);
-					} else {
-						$("#the_ad_in_one").html(adSlot_7_600px_Code);
+				}
+			} catch (err) {}
+
+
+
+
+			try {
+				adscont = document.getElementById("adsense-content-two");
+				target = document.getElementById("adsense-target");
+				var messageContent = target.getElementsByTagName("message-content");
+				if (messageContent.length > 0) {
+					var h3Tags = target.getElementsByTagName("h3");
+					var pTags = target.getElementsByTagName("p");
+					if (h3Tags.length > 2) {
+						insertAfter(adscont, h3Tags[2]);
+						window.setTimeout(function() {
+							if (isDesktop) {
+								$("#the_ad_in_two").html(adSlot_8_300px_Code);
+							} else {
+								$("#the_ad_in_two").html(adSlot_8_600px_Code);
+							}
+					}, 2000);
+					} else if (pTags.length > 7) {
+						insertAfter(adscont, pTags[7]);
+						window.setTimeout(function() {
+							if (isDesktop) {
+								$("#the_ad_in_two").html(adSlot_8_300px_Code);
+							} else {
+								$("#the_ad_in_two").html(adSlot_8_600px_Code);
+							}
+					}, 2000);
 					}
-                }
-            }
-        } catch (err) {}
+				} else {
+					var linebreak = target.getElementsByTagName("span");
+					if (linebreak.length > 4) {
+						insertAfter(adscont, linebreak[4]);
+						window.setTimeout(function() {
+							if (isDesktop) {
+								$("#the_ad_in_two").html(adSlot_8_300px_Code);
+							} else {
+								$("#the_ad_in_two").html(adSlot_8_600px_Code);
+							}
+						}, 2000);
+					}
+				}
+			} catch (err) {}
 
 
 
-
-        try {
-            adscont = document.getElementById("adsense-content-two");
-            target = document.getElementById("adsense-target");
-            var messageContent = target.getElementsByTagName("message-content");
-            if (messageContent.length > 0) {
-                var h3Tags = target.getElementsByTagName("h3");
-                var pTags = target.getElementsByTagName("p");
-                if (h3Tags.length > 2) {
-                    insertAfter(adscont, h3Tags[2]);
-					window.setTimeout(function() {
-						if (isDesktop) {
-							$("#the_ad_in_two").html(adSlot_8_300px_Code);
-						} else {
-							$("#the_ad_in_two").html(adSlot_8_600px_Code);
-						}
-                }, 2000);
-                } else if (pTags.length > 7) {
-                    insertAfter(adscont, pTags[7]);
-					window.setTimeout(function() {
-						if (isDesktop) {
-							$("#the_ad_in_two").html(adSlot_8_300px_Code);
-						} else {
-							$("#the_ad_in_two").html(adSlot_8_600px_Code);
-						}
-                }, 2000);
-                }
-            } else {
-                var linebreak = target.getElementsByTagName("span");
-                if (linebreak.length > 4) {
-                    insertAfter(adscont, linebreak[4]);
-                    window.setTimeout(function() {
-						if (isDesktop) {
-							$("#the_ad_in_two").html(adSlot_8_300px_Code);
-						} else {
-							$("#the_ad_in_two").html(adSlot_8_600px_Code);
-						}
-                    }, 2000);
-                }
-            }
-        } catch (err) {}
-
-
-
-        try {
-            adscont = document.getElementById("adsense-content-three");
-            target = document.getElementById("adsense-target");
-            var messageContent = target.getElementsByTagName("message-content");
-            if (messageContent.length > 0) {
-                var h3Tags = target.getElementsByTagName("h3");
-                var pTags = target.getElementsByTagName("p");
-                if (h3Tags.length > 3) {
-                    insertAfter(adscont, h3Tags[3]);
-					window.setTimeout(function() {
-						if (isDesktop) {
-							$("#the_ad_in_three").html(adSlot_9_300px_Code);
-						} else {
-							$("#the_ad_in_three").html(adSlot_9_600px_Code);
-						}
-					}, 3000);
-                } else if (pTags.length > 11) {
-                    insertAfter(adscont, pTags[11]);
-					window.setTimeout(function() {
-						if (isDesktop) {
+			try {
+				adscont = document.getElementById("adsense-content-three");
+				target = document.getElementById("adsense-target");
+				var messageContent = target.getElementsByTagName("message-content");
+				if (messageContent.length > 0) {
+					var h3Tags = target.getElementsByTagName("h3");
+					var pTags = target.getElementsByTagName("p");
+					if (h3Tags.length > 3) {
+						insertAfter(adscont, h3Tags[3]);
+						window.setTimeout(function() {
+							if (isDesktop) {
 								$("#the_ad_in_three").html(adSlot_9_300px_Code);
 							} else {
 								$("#the_ad_in_three").html(adSlot_9_600px_Code);
-						}
-					}, 3000);
-                }
-            }
-        } catch (err) {}
+							}
+						}, 3000);
+					} else if (pTags.length > 11) {
+						insertAfter(adscont, pTags[11]);
+						window.setTimeout(function() {
+							if (isDesktop) {
+									$("#the_ad_in_three").html(adSlot_9_300px_Code);
+								} else {
+									$("#the_ad_in_three").html(adSlot_9_600px_Code);
+							}
+						}, 3000);
+					}
+				}
+			} catch (err) {}
+		}
     }
 
 
