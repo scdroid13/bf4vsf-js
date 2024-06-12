@@ -122,10 +122,15 @@ var adSlot_Article_1_Code = "<div style='width: 100vw; max-width:720px !importan
 
 
 
+var adSlot_0_250px_Desktop_Code = "<div style='min-height:0px; width: 100vw; max-width:720px !important; max-height:250px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:250px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
 
-var adSlot_0_300px_Code = "<div style='min-height:0px; width: 100vw; max-width:720px !important; max-height:450px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
+var adSlot_0_250px_Mobile_Code = "<div style='min-height:0px; width: 100vw; max-width:450px !important; max-height:250px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:250px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
 
-var adSlot_0_600px_Code = "<div style='min-height:0px; display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
+var adSlot_0_300px_Desktop_Code = "<div style='min-height:0px; width: 100vw; max-width:720px !important; max-height:450px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
+
+var adSlot_0_600px_Mobile_Code = "<div style='min-height:0px; display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
+
+
 
 
 
@@ -296,116 +301,122 @@ function executeAds() {
 
 
 	var adNumber = 0;
-    function populateAdWrappers(isDesktop) {
-		//Stage 3 - Populate Spacial ads
-        adIntervalPx = 400;
-        maxAds = 5;
-        //console.log("Loading ads: isDesktop=" + isDesktop + ", adIntervalPx=" + adIntervalPx + ", maxAds=" + maxAds);
-		var adSlots;
-		if (isDesktop) {
-			adSlots = [adSlot_1_300px_Wrap, adSlot_2_300px_Wrap, adSlot_3_300px_Wrap, adSlot_4_300px_Wrap, adSlot_5_300px_Wrap];
-		} else {
-			adSlots = [adSlot_1_600px_Wrap, adSlot_2_600px_Wrap, adSlot_3_600px_Wrap, adSlot_4_600px_Wrap, adSlot_5_600px_Wrap];
+	function populateAdWrappers(isDesktop) {
+		adIntervalPx = 500;
+		maxAds = 5;
+
+		var adSlots = [];
+		for (var i = 1; i <= 5; i++) {
+			var adSlot_300px_Wrap, adSlot_600px_Wrap;
+			if (isDesktop) {
+				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100%; max-width:720px !important; max-height:300px !important;'></div></center>";
+				adSlots.push(adSlot_300px_Wrap);
+			} else {
+				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100vw; max-width:450px !important; max-height:300px !important;'></div></center>";
+				adSlot_600px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:600px; width:100vw; max-width:450px !important; max-height:600px !important;'></div></center>";
+				// Randomly mix 300px and 600px ad slots for non-desktop
+				if (Math.random() < 0.5) {
+					adSlots.push(adSlot_300px_Wrap);
+				} else {
+					adSlots.push(adSlot_600px_Wrap);
+				}
+			}
 		}
-        var adPositions = []; // Array to store positions of inserted ad slots
-        var adIndex = 0;
-        var adsInserted = 0;
-
-        function getNextAdSlot() {
-            var adSlot = adSlots[adIndex];
-            adIndex = (adIndex + 1) % adSlots.length;
-            return adSlot;
-        }
-
-        function insertAdAfter(element, adContent) {
-            var adDiv = document.createElement('div');
-            adDiv.innerHTML = adContent;
-            element.parentNode.insertBefore(adDiv, element.nextSibling);
-        }
-
-        function insertAdAtTop(target, adContent) {
-            var adDiv = document.createElement('div');
-            adDiv.innerHTML = adContent;
-            target.insertBefore(adDiv, target.firstChild);
-        }
-
-        function isSpaceAvailable(position) {
-            for (var i = 0; i < adPositions.length; i++) {
-                if (Math.abs(adPositions[i] - position) < adIntervalPx) {
-                    return false; // Space is not available
-                }
-            }
-            return true; // Space is available
-        }
-
-        function traverseAndInsertAds(element, accumulatedHeight) {
-            if (adsInserted >= maxAds) return accumulatedHeight;
-
-            var children = Array.from(element.children);
-            children.forEach((child) => {
-                var elementHeight = child.offsetHeight;
-                accumulatedHeight += elementHeight;
-                //console.log("Traversing element, accumulatedHeight: " + accumulatedHeight + ", child.offsetHeight: " + elementHeight);
-
-                if (accumulatedHeight >= adIntervalPx && adsInserted < maxAds) {
-                    var position = accumulatedHeight;
-                    if (isSpaceAvailable(position)) {
-                        var adSlot = getNextAdSlot();
-                        adNumber++;
-                        insertAdAfter(child, adSlot);
-                        adPositions.push(position);
-                        adsInserted++;
-                        //console.log("Inserted ad " + adSlot + " after element");
-                        accumulatedHeight = 0; // Reset height counter after inserting an ad
-                    }
-                }
-
-                accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight); // Recursively traverse child nodes
-            });
-
-            return accumulatedHeight;
-        }
-
-        try {
-            var target = document.getElementsByTagName("message-content")[0];
-            if (!target) {
-                target = document.getElementById("fetch-post-body");
-            }
-
-            if (!target) {
-                //console.error("Element #adsense-target not found.");
-                return;
-            }
 
 
-			//skipping this as using the_ad_in_zero as first ad on top
-			/*
-              // Insert the first ad slot at the top of the target
-              var firstAdSlot = getNextAdSlot();
-              adNumber++;
-              insertAdAtTop(target, firstAdSlot);
-              adPositions.push(0); // First ad is at the top
-              adsInserted++;
-              //console.log("Inserted first ad " + firstAdSlot + " at the top of target");
-			*/
+		var adPositions = [];
+		var adIndex = 0;
+		var adsInserted = 0;
 
-            var targetHeight = target.offsetHeight;
-            //console.log("targetHeight: " + targetHeight);
+		function getNextAdSlot() {
+			var adSlot = adSlots[adIndex];
+			adIndex = (adIndex + 1) % adSlots.length;
+			return adSlot;
+		}
 
-            // Start recursive traversal from target element, starting height from 0
-            traverseAndInsertAds(target, 0);
+		function insertAdAfter(element, adContent) {
+			var adDiv = document.createElement('div');
+			adDiv.innerHTML = adContent;
+			element.parentNode.insertBefore(adDiv, element.nextSibling);
+		}
 
-        } catch (err) {
-            //console.error("Error in ad insertion: ", err);
-        }
-    }
+		function insertAdAtTop(target, adContent) {
+			var adDiv = document.createElement('div');
+			adDiv.innerHTML = adContent;
+			target.insertBefore(adDiv, target.firstChild);
+		}
+
+		function isSpaceAvailable(position) {
+			for (var i = 0; i < adPositions.length; i++) {
+				if (Math.abs(adPositions[i] - position) < adIntervalPx) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		function traverseAndInsertAds(element, accumulatedHeight) {
+			if (adsInserted >= maxAds) return accumulatedHeight;
+
+			var children = Array.from(element.children);
+			children.forEach((child) => {
+				// Normalize tagName to uppercase to ensure case insensitivity
+				var tagName = child.tagName.toUpperCase();
+				
+				// Skip <ul> and <li> tags
+				if (tagName === 'UL' || tagName === 'LI') {
+					accumulatedHeight += child.offsetHeight;
+					accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight); // Recursively traverse child nodes
+					return;
+				}
+
+				var elementHeight = child.offsetHeight;
+				accumulatedHeight += elementHeight;
+
+				if (accumulatedHeight >= adIntervalPx && adsInserted < maxAds) {
+					var position = accumulatedHeight;
+					if (isSpaceAvailable(position)) {
+						var adSlot = getNextAdSlot();
+						adNumber++;
+						insertAdAfter(child, adSlot);
+						adPositions.push(position);
+						adsInserted++;
+						accumulatedHeight = 0; // Reset height counter after inserting an ad
+					}
+				}
+
+				accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight); // Recursively traverse child nodes
+			});
+
+			return accumulatedHeight;
+		}
+
+		try {
+			var target = document.getElementsByTagName("message-content")[0];
+			if (!target) {
+				target = document.getElementById("fetch-post-body");
+			}
+
+			if (!target) {
+				return;
+			}
+
+			var targetHeight = target.offsetHeight;
+
+			traverseAndInsertAds(target, 0);
+
+		} catch (err) {
+			console.error("Error in ad insertion: ", err);
+		}
+	}
+
 	
 	function populateAdCodes(isDesktop) {
 		
 		if (isDesktop) {
-			$("#the_ad_in_zero").html(adSlot_0_300px_Code);
+			$("#the_ad_in_zero").html(adSlot_0_250px_Desktop_Code);
 		} else {
-			$("#the_ad_in_zero").html(adSlot_0_600px_Code);
+			$("#the_ad_in_zero").html(adSlot_0_250px_Mobile_Code);
 		}
 		
 		if (isDesktop) {
@@ -461,8 +472,8 @@ function executeAds() {
 
 
 
-    var full_ad_mobile = true;
-    var full_ad_desktop = true;
+    var full_ad_mobile = false;
+    var full_ad_desktop = false;
     loadAdSetup(full_ad_mobile, full_ad_desktop);
 
     // Apply background blur when the ad container is visible
