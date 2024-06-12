@@ -312,8 +312,8 @@ function executeAds() {
 				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100%; max-width:720px !important; max-height:300px !important;'></div></center>";
 				adSlots.push(adSlot_300px_Wrap);
 			} else {
-				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100vw; max-width:450px !important; max-height:300px !important;'></div></center>";
-				adSlot_600px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:600px; width:100vw; max-width:450px !important; max-height:600px !important;'></div></center>";
+				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100vw; max-width:450px !important; max-height:300px !important; margin-left:-20px !important;'></div></center>";
+				adSlot_600px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:600px; width:100vw; max-width:450px !important; max-height:600px !important; margin-left:-20px !important;'></div></center>";
 				// Randomly mix 300px and 600px ad slots for non-desktop
 				if (Math.random() < 0.5) {
 					adSlots.push(adSlot_300px_Wrap);
