@@ -470,7 +470,7 @@ function executeAds() {
 
 
 
-    var full_ad_mobile = false;
+    var full_ad_mobile = true;
     var full_ad_desktop = false;
 	
     loadAdSetup(full_ad_mobile, full_ad_desktop);
