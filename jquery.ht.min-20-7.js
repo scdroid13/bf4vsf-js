@@ -307,8 +307,8 @@ function executeAds() {
 
 	var adNumber = 0;
 	function populateAdWrappers(isDesktop) {
-		adIntervalPx = 500;
-		maxAds = 5;
+		var adIntervalPx = 500;
+		var maxAds = 5;
 
 		var adSlots = [];
 		for (var i = 1; i <= 5; i++) {
@@ -327,7 +327,6 @@ function executeAds() {
 			}
 		}
 
-
 		var adPositions = [];
 		var adIndex = 0;
 		var adsInserted = 0;
@@ -344,12 +343,6 @@ function executeAds() {
 			element.parentNode.insertBefore(adDiv, element.nextSibling);
 		}
 
-		function insertAdAtTop(target, adContent) {
-			var adDiv = document.createElement('div');
-			adDiv.innerHTML = adContent;
-			target.insertBefore(adDiv, target.firstChild);
-		}
-
 		function isSpaceAvailable(position) {
 			for (var i = 0; i < adPositions.length; i++) {
 				if (Math.abs(adPositions[i] - position) < adIntervalPx) {
@@ -359,18 +352,21 @@ function executeAds() {
 			return true;
 		}
 
-		function traverseAndInsertAds(element, accumulatedHeight) {
+		function traverseAndInsertAds(element, accumulatedHeight, insideUlLi) {
 			if (adsInserted >= maxAds) return accumulatedHeight;
 
 			var children = Array.from(element.children);
 			children.forEach((child) => {
-				// Normalize tagName to uppercase to ensure case insensitivity
 				var tagName = child.tagName.toUpperCase();
-				
-				// Skip <ul> and <li> tags
-				if (tagName === 'UL' || tagName === 'LI') {
+				var isCurrentElementUlLi = tagName === 'UL' || tagName === 'LI';
+
+				// Determine if we are inside a UL or LI
+				var newInsideUlLi = insideUlLi || isCurrentElementUlLi;
+
+				// Skip insertion if inside a UL or LI
+				if (newInsideUlLi) {
 					accumulatedHeight += child.offsetHeight;
-					accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight); // Recursively traverse child nodes
+					accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight, newInsideUlLi); // Recursively traverse child nodes
 					return;
 				}
 
@@ -389,7 +385,7 @@ function executeAds() {
 					}
 				}
 
-				accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight); // Recursively traverse child nodes
+				accumulatedHeight = traverseAndInsertAds(child, accumulatedHeight, newInsideUlLi); // Recursively traverse child nodes
 			});
 
 			return accumulatedHeight;
@@ -405,14 +401,14 @@ function executeAds() {
 				return;
 			}
 
-			var targetHeight = target.offsetHeight;
-
-			traverseAndInsertAds(target, 0);
+			traverseAndInsertAds(target, 0, false);
 
 		} catch (err) {
 			console.error("Error in ad insertion: ", err);
 		}
 	}
+
+
 
 	
 	function populateAdCodes(isDesktop) {
@@ -440,8 +436,7 @@ function executeAds() {
 			  { id: "#adSlot_2", code: adSlot_2_300px_Desktop_Code },
 			  { id: "#adSlot_3", code: adSlot_3_300px_Desktop_Code },
 			  { id: "#adSlot_4", code: adSlot_4_300px_Desktop_Code },
-			  { id: "#adSlot_5", code: adSlot_5_300px_Desktop_Code },
-			  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
+			  { id: "#adSlot_5", code: adSlot_5_300px_Desktop_Code }
 			];
 
 			adCodes.forEach((ad, index) => {
@@ -455,8 +450,7 @@ function executeAds() {
 			  { id: "#adSlot_2", code: adSlot_2_600px_Mobile_Code },
 			  { id: "#adSlot_3", code: adSlot_3_300px_Mobile_Code },
 			  { id: "#adSlot_4", code: adSlot_4_600px_Mobile_Code },
-			  { id: "#adSlot_5", code: adSlot_5_300px_Mobile_Code },
-			  { id: "#the_ad_in_end", code: adSlot_Mutli_Code }
+			  { id: "#adSlot_5", code: adSlot_5_300px_Mobile_Code }
 			];
 
 			adCodes.forEach((ad, index) => {
@@ -478,6 +472,7 @@ function executeAds() {
 
     var full_ad_mobile = false;
     var full_ad_desktop = false;
+	
     loadAdSetup(full_ad_mobile, full_ad_desktop);
 
     // Apply background blur when the ad container is visible
