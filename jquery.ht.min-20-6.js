@@ -319,11 +319,10 @@ function executeAds() {
 			} else {
 				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100vw; max-width:450px !important; max-height:300px !important; margin-left:-20px !important; display: inline-block;'></div></center>";
 				adSlot_600px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:600px; width:100vw; max-width:450px !important; max-height:600px !important; margin-left:-20px !important; display: inline-block;'></div></center>";
-				// Randomly mix 300px and 600px ad slots for non-desktop
 				if ( i % 2 === 0 ) {
-					adSlots.push(adSlot_300px_Wrap);
-				} else {
 					adSlots.push(adSlot_600px_Wrap);
+				} else {
+					adSlots.push(adSlot_300px_Wrap);
 				}
 			}
 		}
