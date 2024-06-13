@@ -126,7 +126,7 @@ var adSlot_0_250px_Desktop_Code = "<div style='min-height:0px; width: 100vw; max
 
 var adSlot_0_250px_Mobile_Code = "<div style='min-height:0px; width: 100vw; max-width:450px !important; max-height:250px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:250px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
 
-var adSlot_0_300px_Desktop_Code = "<div style='min-height:0px; width: 100vw; max-width:720px !important; max-height:450px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
+var adSlot_0_450px_Desktop_Code = "<div style='min-height:0px; width: 100vw; max-width:720px !important; max-height:450px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569' data-ad-format='auto' data-full-width-responsive='true'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
 
 var adSlot_0_600px_Mobile_Code = "<div style='min-height:0px; display: flex; width: 100vw; max-width:450px !important; max-height:600px !important;'><script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7470371338229516' crossorigin='anonymous'><\/script><ins class='adsbygoogle' style='display:inline-block;width:100%;height:600px' data-ad-client='ca-pub-7470371338229516' data-ad-slot='9184620569'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script><\/div>";
 
@@ -319,11 +319,12 @@ function executeAds() {
 			} else {
 				adSlot_300px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:300px; width:100vw; max-width:450px !important; max-height:300px !important; margin-left:-20px !important; display: inline-block;'></div></center>";
 				adSlot_600px_Wrap = "<center><div id='adSlot_" + i + "' style='min-height:0px; height:600px; width:100vw; max-width:450px !important; max-height:600px !important; margin-left:-20px !important; display: inline-block;'></div></center>";
-				if ( i % 2 === 0 ) {
+				/*if ( i % 2 === 0 ) {
 					adSlots.push(adSlot_600px_Wrap);
 				} else {
 					adSlots.push(adSlot_300px_Wrap);
-				}
+				}*/
+				adSlots.push(adSlot_600px_Wrap);
 			}
 		}
 
@@ -414,9 +415,9 @@ function executeAds() {
 	function populateAdCodes(isDesktop) {
 		
 		if (isDesktop) {
-			$("#the_ad_in_zero").html(adSlot_0_250px_Desktop_Code);
+			$("#the_ad_in_zero").html(adSlot_0_450px_Desktop_Code);
 		} else {
-			$("#the_ad_in_zero").html(adSlot_0_250px_Mobile_Code);
+			$("#the_ad_in_zero").html(adSlot_0_600px_Mobile_Code);
 		}
 		
 		if (isDesktop) {
@@ -446,11 +447,11 @@ function executeAds() {
 			});
 		} else {
 			const adCodes = [
-			  { id: "#adSlot_1", code: adSlot_1_300px_Mobile_Code },
+			  { id: "#adSlot_1", code: adSlot_1_600px_Mobile_Code },
 			  { id: "#adSlot_2", code: adSlot_2_600px_Mobile_Code },
-			  { id: "#adSlot_3", code: adSlot_3_300px_Mobile_Code },
+			  { id: "#adSlot_3", code: adSlot_3_600px_Mobile_Code },
 			  { id: "#adSlot_4", code: adSlot_4_600px_Mobile_Code },
-			  { id: "#adSlot_5", code: adSlot_5_300px_Mobile_Code }
+			  { id: "#adSlot_5", code: adSlot_5_600px_Mobile_Code }
 			];
 
 			adCodes.forEach((ad, index) => {
