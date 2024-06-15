@@ -257,7 +257,7 @@ function executeAds() {
         // Detect if the device is desktop or not
         var isDesktop = window.matchMedia("only screen and (min-width: 992px)").matches;
         // Calculate adjusted width and height
-        var adjustedWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) - 50;
+        var adjustedWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) - 10;
         var adjustedHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) - 200;
 
         if (isDesktop) {
@@ -295,11 +295,7 @@ function executeAds() {
         adElement.style.width = width + 'px';
         adElement.style.height = height + 'px';
         adElement.setAttribute('data-ad-client', 'ca-pub-7470371338229516');
-        if (isDesktop) {
-            adElement.setAttribute('data-ad-slot', '4235174117');
-        } else {
-            adElement.setAttribute('data-ad-slot', '4417669187');
-        }
+		adElement.setAttribute('data-ad-slot', adSlot_F_slotid);
         adContainer.appendChild(adElement);
 
         var closeButton = document.createElement('button');
@@ -348,18 +344,18 @@ function executeAds() {
 		if (isDesktop) {
 			$("#the_ad_in_zero").html(adSlot_0_450px_Desktop_Code);
 		} else {
-			$("#the_ad_in_zero").html(adSlot_0_250px_Mobile_Code);
+			$("#the_ad_in_zero").html(adSlot_0_600px_Mobile_Code);
 		}
 		
 		if (isDesktop) {
             // Insert ads in desktop-specific slots
-			setTimeout(() => {
+			//setTimeout(() => {
 				$("#side-bar-unit-left").html(slotFL);
-			}, 500);
+			//}, 500);
 
-			setTimeout(() => {
+			//setTimeout(() => {
 				$("#side-bar-unit-right").html(slotFR);
-			}, 1500);
+			//}, 1500);
         }
 		
 		if (isDesktop) {
@@ -402,7 +398,7 @@ function executeAds() {
 
 
 
-    var full_ad_mobile = true;
+    var full_ad_mobile = false;
     var full_ad_desktop = false;
 	
     loadAdSetup(full_ad_mobile, full_ad_desktop);
